@@ -96,5 +96,4 @@ plt.close()
 print("  ✅ Saved → open 'sample_preview.png' to see your images")
 
 print("\n" + "=" * 55)
-print("✅ Preprocessing is CORRECT — Ready for Stage 4!")
 print("=" * 55)
