@@ -113,12 +113,12 @@ def plot_training_history(history):
     plt.savefig(PLOT_PATH, dpi=120,
                 bbox_inches='tight', facecolor='#1e1e1e')
     plt.close()
-    print(f"\n📊 Training charts saved → {PLOT_PATH}")
+    print(f"\n Training charts saved → {PLOT_PATH}")
 
 
 def evaluate_model(model, test_generator):
     """Evaluates model on test data and prints results"""
-    print("\n⏳ Evaluating on test data...")
+    print("\n Evaluating on test data...")
     test_loss, test_accuracy = model.evaluate(
         test_generator, verbose=1
     )
@@ -137,26 +137,26 @@ def main():
     print("=" * 55)
 
     # ── Step 1: Load Data ────────────────────────────────────
-    print("\n📂 Loading dataset...")
+    print("\n Loading dataset...")
     train_gen, test_gen = get_data_generators()
-    print(f"  ✅ Training samples : {train_gen.samples:,}")
-    print(f"  ✅ Test samples     : {test_gen.samples:,}")
+    print(f"  Training samples : {train_gen.samples:,}")
+    print(f"   Test samples     : {test_gen.samples:,}")
 
     # ── Step 2: Build Model ──────────────────────────────────
-    print("\n🧠 Building CNN model...")
+    print("\n Building CNN model...")
     model = get_model()
-    print(f"  ✅ Model built — {model.count_params():,} parameters")
+    print(f"   Model built — {model.count_params():,} parameters")
 
     # ── Step 3: Setup Callbacks ──────────────────────────────
-    print("\n⚙️  Setting up training callbacks...")
+    print("\n  Setting up training callbacks...")
     callbacks = create_callbacks()
-    print("  ✅ ModelCheckpoint — saves best model automatically")
-    print("  ✅ EarlyStopping   — stops if no improvement")
-    print("  ✅ ReduceLROnPlateau — adjusts learning rate")
-    print("  ✅ CSVLogger       — logs all metrics")
+    print("   ModelCheckpoint — saves best model automatically")
+    print("   EarlyStopping   — stops if no improvement")
+    print("   ReduceLROnPlateau — adjusts learning rate")
+    print("   CSVLogger       — logs all metrics")
 
     # ── Step 4: Train ────────────────────────────────────────
-    print(f"\n🚀 Starting training — up to {EPOCHS} epochs...")
+    print(f"\n Starting training — up to {EPOCHS} epochs...")
     print("  This will take 20-40 minutes. Do not close VS Code!")
     print("-" * 55)
 
@@ -169,7 +169,7 @@ def main():
     )
 
     # ── Step 5: Plot Results ─────────────────────────────────
-    print("\n📊 Generating training charts...")
+    print("\n Generating training charts...")
     plot_training_history(history)
 
     # ── Step 6: Evaluate ─────────────────────────────────────
@@ -189,7 +189,7 @@ def main():
     print(f"  Training log      : {LOG_PATH}")
     print(f"  Training charts   : {PLOT_PATH}")
     print(f"{'='*55}")
-    print("✅ Ready for Stage 6!")
+    
 
 
 if __name__ == '__main__':
