@@ -3,7 +3,6 @@
 
 **SIMAD University — Final Year Project**
 **Students:** Hiba Ali Dhiif | Jawahir Hassan Mohamud 
-**Supervisor:** Mohamed Abdirahman Addow
 
 ---
 
