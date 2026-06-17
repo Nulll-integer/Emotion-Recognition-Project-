@@ -36,4 +36,3 @@ try:
 except Exception as e:
     print(f"❌ Pillow FAILED: {e}")
 
-print("\n🎉 If all show ✅, your environment is ready!")
