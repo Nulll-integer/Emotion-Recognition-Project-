@@ -15,7 +15,7 @@ total_images = 0
 all_good = True
 
 for split in splits:
-    print(f"\n📁 {split.upper()} SET:")
+    print(f"\n {split.upper()} SET:")
     split_total = 0
 
     for emotion in emotions:
@@ -30,11 +30,11 @@ for split in splits:
             print(f"  ✅ {emotion:<12} → {count:,} images")
             split_total += count
 
-    print(f"  📊 {split.upper()} TOTAL: {split_total:,} images")
+    print(f"   {split.upper()} TOTAL: {split_total:,} images")
     total_images += split_total
 
 print("\n" + "=" * 50)
-print(f"📊 GRAND TOTAL: {total_images:,} images")
+print(f" GRAND TOTAL: {total_images:,} images")
 
 if all_good:
     print("✅ Dataset structure is CORRECT — Ready for training!")
