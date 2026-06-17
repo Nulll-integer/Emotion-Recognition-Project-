@@ -15,11 +15,11 @@ print("  PREPROCESSING VERIFICATION")
 print("=" * 55)
 
 # ── Load Data ────────────────────────────────────────────────
-print("\n⏳ Loading data generators...")
+print("\n Loading data generators...")
 train_gen, test_gen = get_data_generators()
 
 # ── Print Statistics ─────────────────────────────────────────
-print("\n📊 DATASET STATISTICS:")
+print("\n DATASET STATISTICS:")
 print(f"  Training samples   : {train_gen.samples:,}")
 print(f"  Test samples       : {test_gen.samples:,}")
 print(f"  Image size         : {IMG_SIZE}x{IMG_SIZE} pixels")
@@ -30,7 +30,7 @@ print(f"  Training batches   : {len(train_gen)}")
 print(f"  Test batches       : {len(test_gen)}")
 
 # ── Verify Class Mapping ─────────────────────────────────────
-print("\n🏷️  CLASS MAPPING:")
+print("\n  CLASS MAPPING:")
 for emotion, index in train_gen.class_indices.items():
     print(f"  {index} → {emotion}")
 
@@ -49,7 +49,7 @@ else:
     print("\n  ❌ Normalization FAILED — check rescale parameter")
 
 # ── Save Sample Images ───────────────────────────────────────
-print("\n💾 Saving sample images to 'sample_preview.png'...")
+print("\n Saving sample images to 'sample_preview.png'...")
 
 emotions    = get_class_labels()
 fig, axes   = plt.subplots(2, 6, figsize=(18, 6))
